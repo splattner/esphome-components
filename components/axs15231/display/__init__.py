@@ -6,6 +6,9 @@ from esphome.components import (
     spi,
     display,
 )
+from esphome.components.spi import (
+    TYPE_QUAD
+)
 from esphome.const import (
     CONF_RESET_PIN,
     CONF_OUTPUT,
@@ -73,7 +76,7 @@ CONFIG_SCHEMA = cv.All(
                 cs_pin_required=False,
                 default_mode="MODE0",
                 default_data_rate=20e6,
-                quad=True,
+                mode=TYPE_QUAD,
             )
         )
     ),
